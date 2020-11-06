@@ -14,7 +14,7 @@ phases:
       - echo Entered the pre_build phase...
       - echo Logging in to Amazon ECR...
       #- $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
-      - docker login -u AWS -p P@$$w0rd00 542036681178.dkr.ecr.us-east-2.amazonaws.com
+      - eval $(docker login -u AWS -p P@$$w0rd00 542036681178.dkr.ecr.us-east-2.amazonaws.com | sed 's|https://||')
       - eval $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION | sed 's|https://||')
       - REPOSITORY_URI=542036681178.dkr.ecr.us-east-2.amazonaws.com/nodejs-demo
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
