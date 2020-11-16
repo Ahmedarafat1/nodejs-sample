@@ -1,6 +1,6 @@
 [
     {
-        "name": "nodejs-wep-app",
+        "name": "nodejs-wepapp",
         "imageUri": "542036681178.dkr.ecr.us-east-2.amazonaws.com/nodejs-demo"
     }
 ]
